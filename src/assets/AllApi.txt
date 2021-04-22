@@ -1,0 +1,19 @@
+Employee Registration :(POST) http://localhost:8080/register-employee   {return boolean}
+
+Employee Forget Password :(GET) http://localhost:8080/employee/{email}   {return boolean}
+
+Employee Login : (GET) http://localhost:8080/employee-login/{email}/{paasward}  {return boolean}
+
+Create New Ticket : (POST) http://localhost:8080/{emp_id}/request-new-ticket  {return boolean}
+
+Update Ticket Details : (PUT) http://localhost:8080/requested-ticket/{ticket_id}  {return boolean}
+
+To Change The Status Of The Ticket : (PUT) http://localhost:8080/requested-ticket/{ticket_id}/status/{status}  {return String of status}
+
+Admin Login : (GET) http://localhost:8080/admin-login/{email}/{passward}   {return boolean}
+
+To Get Tickets By Employe id for home Page : (GET) http://localhost:8080/requested-ticket/{emp_id}     {return RequestedTickets list}
+
+To Get all Tickets for admin : (GET) http://localhost:8080/{admin_id}/All-tickets     {return RequestedTickets list}
+
+To get all tickets for admin sortby priority : (GET) http://localhost:8080/{adminName}/All-tickets-sortby-priority    {return RequestedTickets list}

@@ -1,0 +1,104 @@
+<div>
+    <div class="cardalign">
+<div  class="container-fluid card">
+    <h1>registration form</h1>
+<form #employeeData="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+    {{employeeData.value | json}}
+
+    <hr>
+
+    {{employeeModel | json}}
+
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" #firstname="ngModel" required
+         class="form-control" [class.is-invalid] = "firstname.invalid && firstname.touched"
+        style="width:500px;height:30px;" name="firstname" [(ngModel)]=employeeModel.first_name>
+        <small class= "text-danger" [class.d-none]="firstname.valid || firstname.untouched">First name is required</small>
+      </div>
+      {{firstname.valid}}
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" style="width:500px;height:30px;" 
+        #lastname="ngModel" required [class.is-invalid] = "lastname.invalid && lastname.touched"
+        name="lastname" [(ngModel)]=employeeModel.last_name>
+        <small class= "text-danger" [class.d-none]="lastname.valid || lastname.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" style="width:500px;height: 30px;" #email="ngModel" required 
+        [class.is-invalid] = "email.invalid && email.touched"
+        name="email" [(ngModel)]=employeeModel.email>
+        <small class= "text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+      </div>
+      <div class="form-group">
+        <label>Telephone</label>
+        <input type="tel" class="form-control" Pattern = "[A-Za-z0-9]{10,15}" style="width:500px;height: 30px;" #telephone="ngModel"
+         required [class.is-invalid] = "telephone.invalid && telephone.touched"
+        name="telephone" [(ngModel)]=employeeModel.telephone>
+        <small class= "text-danger" [class.d-none]="telephone.valid || telephone.untouched">Telephone is required</small>
+      </div>
+      <div class="form-group">
+        <label>Business Unit</label>
+        <input type="text" #BU class="form-control"  style="width:500px;height: 30px;" #business_unit="ngModel" 
+        required [class.is-invalid] = "business_unit.invalid && business_unit.touched"
+        name="business_unit" [(ngModel)]=employeeModel.business_unit>
+        <small class= "text-danger" [class.d-none]="business_unit.valid || business_unit.untouched">Business Unit is required</small>
+      </div>
+
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control"  style="width:500px;height: 30px;" #title="ngModel"
+         required [class.is-invalid] = "title.invalid && title.touched"
+        name="title" [(ngModel)]=employeeModel.title>
+        <small class= "text-danger" [class.d-none]="title.valid || title.untouched">title is required</small>
+      </div>
+      <div class="form-group">
+        <label>Address_1</label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" #address_1="ngModel"
+         required [class.is-invalid] = "address_1.invalid && address_1.touched"
+        name="address_1" [(ngModel)]=employeeModel.address_1>
+        <small class= "text-danger" [class.d-none]="address_1.valid || address_1.untouched">Address is required</small>
+      </div>
+      <div class="form-group">
+        <label>Address_2</label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" #address_2="ngModel" 
+        name="lastname" [(ngModel)]=employeeModel.address_2>
+      </div>
+      <div class="form-group">
+        <label>Zip</label>
+        <input type="text" class="form-control"  style="width:500px;height: 30px;" #zip="ngModel"
+        required [class.is-invalid] = "zip.invalid && zip.touched"
+        name="zip" [(ngModel)]=employeeModel.zip>
+        <small class= "text-danger" [class.d-none]="zip.valid || zip.untouched">Zip is required</small>
+      </div>
+      <div class="form-group">
+        <label>city</label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" #city="ngModel" 
+        required [class.is-invalid] = "city.invalid && city.touched"
+        name="city" [(ngModel)]=employeeModel.city>
+        <small class= "text-danger" [class.d-none]="city.valid || city.untouched">City is required</small>
+      </div>
+      <div class="form-group">
+        <label>State</label>
+        <input type="text" class="form-control"  style="width:500px;height: 30px;" #state ="ngModel"
+         required [class.is-invalid] = "state.invalid && state.touched"
+        name="state" [(ngModel)]=employeeModel.state>
+        <small class= "text-danger" [class.d-none]="state.valid || state.untouched">State is required</small>
+      </div>
+      <div class="form-group">
+        <label>Country</label>
+        <input type="text" class="form-control"  style="width:500px;height: 30px;" #country="ngModel" 
+        required [class.is-invalid] = "country.invalid && country.touched"
+        name="country" [(ngModel)]=employeeModel.country>
+        <small class= "text-danger" [class.d-none]="country.valid || country.untouched">Country is required</small>
+      </div>
+      <div class="row" >
+        <button class="btn" routerLink="/" >Cancel</button>
+      <button [disabled]="employeeData.form.invalid" class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+</div>
+</div>
+</div>

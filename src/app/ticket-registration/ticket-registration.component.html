@@ -1,0 +1,104 @@
+<div>
+    <div class="cardalign">
+<div  class="container-fluid card">
+    <h1>Ticket registration form</h1>
+<form #ticketData="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+  
+
+    <div class="form-group">
+        <label>Request Type</label>
+        <input type="text" class="form-control" style="width:500px;height:30px;" #request_type="ngModel" 
+        required [class.is-invalid] = "request_type.invalid && request_type.touched"
+        name="request_type" [(ngModel)]=ticketModel.request_type>
+        <small class= "text-danger" [class.d-none]="request_type.valid || request_type.untouched">Last name is required</small>
+      </div>
+
+      <div class="form-group">
+        <label>Priority</label>
+        <select class="custom-select" name="priority" [(ngModel)]=ticketModel.priority>
+        <option selected>select priority</option>
+        <option *ngFor = "let pri of priorities">{{pri}}</option>
+    </select>
+        </div>
+
+      <div class="form-group">
+        <label>Travel City </label>
+        <input type="email" class="form-control" style="width:500px;height: 30px;" #to_travel_city="ngModel" 
+        required [class.is-invalid] = "to_travel_city.invalid && to_travel_city.touched"
+        name="to_travel_city" [(ngModel)]=ticketModel.to_travel_city>
+        <small class= "text-danger" [class.d-none]="to_travel_city.valid || to_travel_city.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>From Locattion city</label>
+        <input type="tel" class="form-control" style="width:500px;height: 30px;" #from_travel_city="ngModel" 
+        required [class.is-invalid] = "from_travel_city.invalid && from_travel_city.touched"
+        name="from_travel_city" [(ngModel)]=ticketModel.from_travel_city>
+        <small class= "text-danger" [class.d-none]="from_travel_city.valid || from_travel_city.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>Travel Start Date</label>
+        <input type="date" #BU class="form-control" style="width:500px;height: 30px;" #travel_start_date="ngModel"
+         required [class.is-invalid] = "travel_start_date.invalid && travel_start_date.touched"
+        name="travel_start_date" [(ngModel)]=ticketModel.travel_start_date>
+        <small class= "text-danger" [class.d-none]="travel_start_date.valid || travel_start_date.untouched">Last name is required</small>
+      </div>
+
+      <div class="form-group">
+        <label>Travel End Date</label>
+        <input type="date" class="form-control" name="title" style="width:500px;height: 30px;" required
+        name="travel_end_date" [(ngModel)]=ticketModel.travel_end_date >
+        
+      </div>
+      <div class="form-group">
+        <label>Passport Number</label>
+        <input type="text" class="form-control"  style="width:500px;height: 30px;" #passport_number="ngModel" 
+        required [class.is-invalid] = "passport_number.invalid && passport_number.touched"
+        name="passport_number" [(ngModel)]=ticketModel.passport_number>
+        <small class= "text-danger" [class.d-none]="passport_number.valid || passport_number.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>Project Name</label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" #project_name="ngModel" 
+        red [class.is-invalid] = "project_name.invalid && project_name.touched"
+        name="project_name" [(ngModel)]=ticketModel.project_name>
+        <small class= "text-danger" [class.d-none]="passport_number.valid || passport_number.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>Expense Borne by</label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" #expense_borne_by="ngModel" 
+        required [class.is-invalid] = "expense_borne_by.invalid && expense_borne_by.touched"
+        name="expense_borne_by" [(ngModel)]=ticketModel.expense_borne_by>
+        <small class= "text-danger" [class.d-none]="expense_borne_by.valid || expense_borne_by.untouched">Last name is required</small>
+      </div>
+      <div class="form-group">
+        <label>Travel Approver Name </label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" 
+        name="travel_approver_name" [(ngModel)]=ticketModel.travel_approver_name>
+      </div>
+      <div class="form-group">
+        <label>Expected Duration of Travel </label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" 
+        name="duration_of_travel" [(ngModel)]=ticketModel.duration_of_travel>
+      </div>
+      <div class="form-group">
+        <label>Any Upper Bound on the allowed amount? </label>
+        <input type="text" class="form-control" style="width:500px;height: 30px;" 
+        name="upper_bound_amount" [(ngModel)]=ticketModel.upper_bound_amount>
+      </div>
+      <div class="form-group">
+        <label>Any Additional Details </label>
+        <textarea type="text" class="form-control" style="width:500px;height: 30px;" #additional_comments="ngModel" 
+        required [class.is-invalid] = "additional_comments.invalid && additional_comments.touched"
+        name="additional_comments" [(ngModel)]=ticketModel.additional_comments>
+        <small class= "text-danger" [class.d-none]="additional_comments.valid || additional_comments.untouched">Last name is required</small>
+     ></textarea>
+      </div>
+      <div class="row" >
+        <button class="btn" routerLink="/" >Cancel</button>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+</div>
+</div>
+</div>

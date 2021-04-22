@@ -1,0 +1,18 @@
+hr {
+    display: block;
+    margin-bottom: 1px;
+    margin-top: 8px;
+}
+.logoclass{
+    text-align: center;
+        display: block;  
+        
+}
+.fixx{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.bottomclass{
+    margin-top:10px;
+}

@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.cardalign{
+    position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 400px;
+    width: 600px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    box-shadow: 0 5px 10px rgba(107, 107, 107, 0.35);
+  }
+  
+/* To make cursor pointer when hover on it */
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+/* To make translate when hover on it  */
+.card:not(.highlight-card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 183, 49, 0.35);
+    background-color: #ffffff;
+  }
+
