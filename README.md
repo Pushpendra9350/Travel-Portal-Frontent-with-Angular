@@ -1,4 +1,22 @@
-# TravelPortalApp
+# Travel Portal Web Application with Angular 
+
+This is a Frontend web application for a web portal which is build on Angular framework.
+
+## About
+In this application a employee can raise a ticket to his/her manger to travel to other place regarding company work then he/she needs expenses, other details and documents for smooth working experience then manager or admin will update all details on the same portal regarding his/her conserns.
+
+## Technology used
+* TypeScript
+* JavaScript
+* HTML
+* CSS
+
+## Tools Used
+* Editor: VSCode
+* chrome Browser
+
+
+## Other informations
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
